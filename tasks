@@ -1,1 +1,18 @@
-Задания в ветках: task_64, task_66 и task_68
+int n = InputNumbers("Введите значение N: ");
+int count = 2;
+PrintNumber(n, count);
+Console.Write(1);
+
+void PrintNumber(int n, int count)
+{
+    if (count > n) return;
+    PrintNumber(n, count + 1);
+    Console.Write(count + ", ");
+}
+
+int InputNumbers(string input)
+{
+    Console.Write(input);
+    int output = Convert.ToInt32(Console.ReadLine());
+    return output;
+}
